@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { BsFillHouseFill } from "react-icons/bs";
 import { FaCity } from "react-icons/fa";
 import "../Home/Home.css";
-import Favorites from "../../Favorites/Favorites";
+import Favorites from "../Home/Favorites/Favorites";
 
 const Home = () => {
   return (
