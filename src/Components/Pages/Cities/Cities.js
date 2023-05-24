@@ -30,6 +30,8 @@ const Cities = () => {
             </NavLink>
           </div>
         </div>
+
+        {/* City Names Component goes here */}
         <CityNames />
       </div>
     </div>
