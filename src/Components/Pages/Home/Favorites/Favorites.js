@@ -1,7 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { RiAddBoxFill } from "react-icons/ri";
-import "./Favorites.css";
+import "../Favorites/Favorites.css";
 
 const Favorites = () => {
   return (
