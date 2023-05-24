@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { BsFillHouseFill } from "react-icons/bs";
 import { FaCity } from "react-icons/fa";
 import "../Home/Home.css";
+import CityNames from "./CityNames/CityNames";
 
 const Cities = () => {
   return (
@@ -29,6 +30,7 @@ const Cities = () => {
             </NavLink>
           </div>
         </div>
+        <CityNames />
       </div>
     </div>
   );
