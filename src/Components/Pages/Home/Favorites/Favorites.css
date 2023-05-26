@@ -71,3 +71,8 @@ justify-content: space-between;
 .btn{
   color: white;
 }
+
+.star-icon {
+  color: gold;
+  font-size: 30px;
+}
