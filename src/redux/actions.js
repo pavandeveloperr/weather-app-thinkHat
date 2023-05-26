@@ -1,16 +1,4 @@
 import * as actionTypes from "./actionTypes";
-import { fetchWeatherApi } from "./api";
-
-export const fetchWeatherData = (city) => {
-  return async (dispatch) => {
-    try {
-      const weatherData = await fetchWeatherApi(city); // Call the API function to fetch weather data
-      dispatch(fetchWeatherSuccess(city, weatherData));
-    } catch (error) {
-      dispatch(fetchWeatherError(error.message));
-    }
-  };
-};
 
 export const addCity = (city) => {
   return {
