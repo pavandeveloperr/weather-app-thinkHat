@@ -28,11 +28,28 @@
     align-items: center;
     margin: 10px 10px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.city-card:hover{
+  background-color: #f0f0f0;
 }
 
 .city-card p {
     margin: 0;
+}
 
+.city-card.selected {
+  background-color: #f0f0f0; /* Change to your desired selected card background color */
+  color: #000; /* Change to your desired selected card text color */
+}
+
+.selected p {
+  font-weight: bold;
+}
+
+.selected small {
+  color: #333333;
 }
 
 .Add-city-btn {
@@ -75,9 +92,22 @@
     text-align: center;
 }
 
-.start-icon {
+.star-icon {
     color: gold;
     font-size: 30px;
+    cursor: pointer;
+}
+
+.star-icon {
+  transition: fill 0.3s;
+}
+
+.star-icon.filled {
+  fill: gold;
+}
+
+.start-icon:hover{
+  fill: gold;
 }
 
 /* modal styles goes here  */
@@ -157,7 +187,7 @@
   
   .modal-footer button {
     padding: 8px 16px;
-    background-color: #ccc;
+    background-color: #863be1;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -165,7 +195,7 @@
   }
   
   .modal-footer button:hover {
-    background-color: #999;
+    background-color: #121111;
   }
   
   /* Rest of the existing styles for CityNames component */
