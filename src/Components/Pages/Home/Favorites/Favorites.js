@@ -14,6 +14,7 @@ const Favorites = () => {
     localStorage.setItem("favorites", JSON.stringify(favoriteCities));
   }, [favoriteCities]);
 
+  // Handles the click event on "start-icon" to remove the favorite city
   const handleRemoveFavorite = (city) => {
     dispatch(removeFromFavorites(city));
     toast.error("City removed from favorites!");
