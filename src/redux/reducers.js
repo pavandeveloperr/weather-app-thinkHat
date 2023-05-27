@@ -1,5 +1,4 @@
 import * as actionTypes from "./actionTypes";
-import { combineReducers } from "redux";
 
 const storedCities = localStorage.getItem("cities");
 
@@ -12,7 +11,7 @@ const initialState = {
   error: null,
 };
 
-const citiesReducer = (state = initialState.cities, action) => {
+export const citiesReducer = (state = initialState.cities, action) => {
   switch (action.type) {
     case actionTypes.ADD_CITY:
       if (state.includes(action.payload)) {
@@ -20,15 +19,16 @@ const citiesReducer = (state = initialState.cities, action) => {
       }
       return [...state, action.payload];
 
-    case actionTypes.REMOVE_CITY:
-      return state.filter((city) => city !== action.payload);
-
+    case actionTypes.DELETE_CITY:
+      const updatedState = state.filter((city) => city !== action.payload);
+      localStorage.setItem("cities", JSON.stringify(updatedState));
+      return updatedState;
     default:
       return state;
   }
 };
 
-const weatherReducer = (state = initialState.weatherData, action) => {
+export const weatherReducer = (state = initialState.weatherData, action) => {
   switch (action.type) {
     case actionTypes.FETCH_WEATHER_SUCCESS:
       return [
@@ -40,12 +40,15 @@ const weatherReducer = (state = initialState.weatherData, action) => {
       // Handle error if needed
       return state;
 
+    case actionTypes.DELETE_CITY:
+      return state.filter((city) => city.name !== action.payload);
+
     default:
       return state;
   }
 };
 
-const favoriteReducer = (state = initialState, action) => {
+export const favoriteReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_FAVORITES:
       const { city, weatherData } = action.payload;
@@ -86,11 +89,3 @@ const favoriteReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-const rootReducer = combineReducers({
-  cities: citiesReducer,
-  weatherData: weatherReducer,
-  favorites: favoriteReducer,
-});
-
-export default rootReducer;
