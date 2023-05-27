@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { BsFillHouseFill } from "react-icons/bs";
 import { FaCity } from "react-icons/fa";
 import "../Home/Home.css";
-import CityNames from "./CityNames/CityNames";
+import CityWeather from "./CityWeather/CityWeather";
 
 const Cities = () => {
+  const location = useLocation();
   return (
     <div className="parent-container">
       <div className="container">
@@ -14,8 +15,9 @@ const Cities = () => {
             <NavLink
               exact
               to="/"
-              className="side-menu__link"
-              activeClassName="active-link"
+              className={`side-menu__link ${
+                location.pathname === "/" ? "active-link" : ""
+              }`}
             >
               <BsFillHouseFill className="side-menu__icon" /> Home
             </NavLink>
@@ -23,7 +25,9 @@ const Cities = () => {
           <div className="side-menu__item">
             <NavLink
               to="/cities"
-              className="side-menu__link"
+              className={`side-menu__link ${
+                location.pathname === "/cities" ? "active-link" : ""
+              }`}
               activeClassName="active-link"
             >
               <FaCity className="side-menu__icon" /> Cities
@@ -32,7 +36,7 @@ const Cities = () => {
         </div>
 
         {/* City Names Component goes here */}
-        <CityNames />
+        <CityWeather />
       </div>
     </div>
   );
