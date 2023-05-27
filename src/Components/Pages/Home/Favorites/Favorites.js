@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { FaStar } from "react-icons/fa";
-import { RiAddBoxFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromFavorites } from "../../../../redux/actions";
 import "../Favorites/Favorites.css";
@@ -25,17 +24,15 @@ const Favorites = () => {
       <div className="content">
         <div className="fav-city-header">
           <h3>My Favorite Cities</h3>
-          <div className="add-btn">
-            <span>Add new City</span>
-            <RiAddBoxFill className="btn" />
-          </div>
         </div>
         {favoriteCities.length === 0 ? (
-          <p>Please add cities to view your favorite cities.</p>
+          <p className="info-text">
+            Please add cities to view your favorite cities.
+          </p>
         ) : (
-          <div className="card-container">
+          <div className="fav-card-container">
             {favoriteCities.map((favorite) => (
-              <div className="weather-card" key={favorite.city}>
+              <div className="fav-weather-card" key={favorite.city}>
                 <div className="city-name">
                   <h4>{favorite.city}</h4>
                   <FaStar
@@ -57,6 +54,17 @@ const Favorites = () => {
                       Description:{" "}
                       {favorite.weatherData &&
                         favorite.weatherData.weather[0].description}
+                    </p>
+                    <p>
+                      Humidity:{" "}
+                      {favorite.weatherData &&
+                        favorite.weatherData.main.humidity}{" "}
+                      %
+                    </p>
+                    <p>
+                      Wind Speed:{" "}
+                      {favorite.weatherData && favorite.weatherData.wind.speed}{" "}
+                      km/h
                     </p>
                   </div>
                 </div>
