@@ -1,25 +1,20 @@
 .parent-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 100%;
-    background-color: #212121; */
-    /* max-width: 1200px; */
     margin: 0 auto;
-    padding: 20px;
+    padding: 60px;
+    background-color: #212121; 
+
   }
   
   .container {
-    height: 100%;
     display: flex;
     border: 2px gray solid;
+    border-radius: 0.4rem;
+
   }
   
   .side-menu {
     width: 12%;
-    /* height: 100vh; */
     border-right: 1px gray solid;
-    /* background-color: gold; */
   }
 
   .side-menu__item {
@@ -41,14 +36,20 @@
     width: 100%;
     height: 50px;
     text-decoration: none;
-    /* color: white; */
+    color: wheat;
   }
   
   .side-menu__icon {
     margin-right: 5px;
     font-size: 20px;
+    color: white;
   }  
 
   .side-menu__item.side-menu__link:active{
-    background-color: #14ffec;
+    background-color: #002825;
+  }
+
+  .active-link {
+    background-color: rgba(122, 227, 227, 0.703);
+    color: black;
   }

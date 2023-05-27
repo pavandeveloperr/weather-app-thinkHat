@@ -1,0 +1,252 @@
+
+.city-list {
+    /* background-color: blueviolet; */
+    border: 1px solid gray;
+    border-radius: 0.4rem;
+}
+
+.city-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+    border-bottom: 1px solid gray;
+    padding: 0px 10px;
+}
+
+.cities-container {
+    display: flex;
+    /* height: 100vh; */
+    border-radius: 0.4rem gray;
+}
+
+.city-card {
+    border: 1px solid gray;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.city-card:hover{
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.city-card p {
+    margin: 0;
+}
+
+.city-card.selected {
+  background-color: #f0f0f0; 
+  color: black;
+}
+
+.selected p {
+  font-weight: bold;
+}
+
+.selected small {
+  color: #333333;
+}
+
+.Add-city-btn {
+    font-size: 25px;
+    color: rgb(180, 119, 233);
+    cursor: pointer;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  cursor: pointer;
+  color: orangered;
+}
+
+/* Weather details  */
+
+.city-weather-container {
+    /* background-color: cyan; */
+    margin-left: 15px;
+    width: 100%;
+    border: 1.5px solid gray;
+    border-radius: 0.4rem;
+}
+
+.selected-city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1.5px solid gray;
+}
+
+.weather-content-box {
+    background-color: #fff;
+    /* border: 2px solid gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.weather-details {
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.star-icon {
+    color: gold;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.star-icon {
+  transition: fill 0.3s;
+}
+
+.star-icon.filled {
+  fill: gold;
+}
+
+.start-icon:hover{
+  fill: gold;
+}
+
+/* modal styles goes here  */
+
+/* CityWeather.css */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #121111;
+  }
+  
+  .modal-header p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .modal-body input[type="text"] {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .city-names-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+  }
+  
+  
+  .city-names-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .city-list li .add-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .city-list li .Add-city-btn {
+    margin-left: 10px;
+  }
+  
+ 
+  .modal-footer {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .modal-footer button {
+    padding: 8px 16px;
+    background-color: #863be1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-footer button:hover {
+    background-color: #121111;
+  }
+  
+
+.weather-cards {
+  display: grid;
+  grid-template-columns: repeat(800px, 1fr);
+  grid-gap: 20px; 
+  /* background-color: yellow; */
+  align-items: center;
+}
+
+.weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  /* background-color: #fff; */
+  /* background-color: red; */
+  width: 50%;
+  height: 20vh;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px;
+  /* background-color: green; */
+  gap: 30px;
+}
+
+.weather-category {
+  padding-right: 20px;
+}

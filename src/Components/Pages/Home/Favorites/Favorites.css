@@ -3,6 +3,7 @@
   display: flex;
   width: 100%;
   padding: 20px;
+  height: 100vh;
 }
 
 .fav-city-header{
@@ -24,7 +25,7 @@ justify-content: space-between;
   padding: 0px 10px;
 }
 
-.card-container{
+.fav-card-container{
   /* background-color: yellow; */
   margin-top: 20px;
   display: flex;
@@ -32,7 +33,7 @@ justify-content: space-between;
   justify-content: space-between;
 }
 
-.weather-card{
+.fav-weather-card{
   /* background-color: red; */
   width: 45%;
   padding: 10px;
@@ -46,13 +47,17 @@ justify-content: space-between;
 .weather-deatils{
   /* background-color: cyan; */
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
 }
 
 .details{
   /* background-color: bisque; */
-  height: 200px;
+  height: 300px;
   padding: 5px;
-  border: 1px solid gray;
+  padding-top: 140px;
 }
 
 .add-btn{
@@ -76,3 +81,10 @@ justify-content: space-between;
   color: gold;
   font-size: 30px;
 }
+
+.info-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} 
