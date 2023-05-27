@@ -47,7 +47,7 @@ const Modal = ({ onClose, onAddCity }) => {
             value={searchQuery}
             onChange={handleSearchChange}
           />
-          <ul className="city-list">
+          <ul className="city-names-list">
             {filteredCities.map((city) => (
               <li key={city}>
                 {city}
